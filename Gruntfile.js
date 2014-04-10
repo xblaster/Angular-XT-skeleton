@@ -31,9 +31,9 @@ module.exports = function (grunt) {
         files: ['{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js'],
         tasks: ['newer:jshint:all']
       },
-      recess: {
+      less: {
             files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
-            tasks: ['recess:dist']
+            tasks: ['less:dist']
         },
       jsTest: {
         files: ['test/spec/{,*/}*.js'],
@@ -140,7 +140,7 @@ module.exports = function (grunt) {
       }
     },
 
-      recess: {
+      less: {
           options: {
               compile: true
           },
@@ -248,11 +248,11 @@ module.exports = function (grunt) {
     },
 
     // Replace Google CDN references
-    cdnify: {
+/*    cdnify: {
       dist: {
         html: ['<%= yeoman.dist %>/*.html']
       }
-    },
+    },*/
 
     // Copies remaining files to places other tasks can use
     copy: {
@@ -289,14 +289,14 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'recess',
+        'less',
         'copy:styles'
       ],
       test: [
         'copy:styles'
       ],
       dist: [
-          'recess',
+          'less',
         'copy:styles',
         'imagemin',
         'svgmin',
@@ -375,7 +375,6 @@ module.exports = function (grunt) {
     'concat',
     'ngmin',
     'copy:dist',
-    'cdnify',
     'cssmin',
     'uglify',
     'rev',
