@@ -265,7 +265,7 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
-            'bower_components/**/*',
+            'bower_components/**/*.js',
             'images/{,*/}*.{webp}',
             'fonts/*'
           ]
@@ -298,8 +298,8 @@ module.exports = function (grunt) {
       dist: [
           'less',
         'copy:styles',
-        'imagemin',
-        'svgmin',
+        /*'imagemin',*
+        'svgmin',*/
         'htmlmin'
       ]
     },
