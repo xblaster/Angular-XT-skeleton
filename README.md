@@ -11,7 +11,7 @@ Requirements
 
 install
 ===================
- 
+ ```
  npm install  //install npm dependencies
  
  bower install //install bower dependencies
@@ -19,3 +19,4 @@ install
  grunt serve //serve ze app for development
  
  grunt build //build website in dist
+```
