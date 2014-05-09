@@ -11,12 +11,21 @@ Requirements
 
 install
 ===================
+install npm dependencies
  ```
- npm install  //install npm dependencies
+ npm install 
+ ```
+ install bower dependencies
+ ```
+ bower install
+ ```
+ serve ze app for development
+ ```
+ grunt serve
+ ```
  
- bower install //install bower dependencies
- 
- grunt serve //serve ze app for development
- 
- grunt build //build website in dist
-```
+build website in dist 
+ ```
+ grunt build
+ ```
+
